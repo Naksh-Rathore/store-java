@@ -2,7 +2,7 @@ public class Product {
     private final String name;
     private final String brand;
 
-    private int price;
+    private final int price;
 
     Product(String name, String brand, int price) {
         this.name = name;
@@ -25,9 +25,5 @@ public class Product {
 
     public int getPrice() {
         return this.price;
-    }
-
-    public void setPrice(int newPrice) {
-        this.price = newPrice;
     }
 }
