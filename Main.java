@@ -57,9 +57,13 @@ public class Main {
                 System.out.println();
     
                 do { 
-                    System.out.print("Enter Choice (Balance: $" + balance + "): ");
+                    System.out.print("Enter Choice or enter 0 for quit (Balance: $" + balance + "): ");
                     choice = scanner.nextInt();
-                } while (choice < 1 || (choice - 1) >= products.size());
+                } while ((choice < 0 || (choice - 1) >= products.size()));
+
+                if (choice == 0) {
+                    break;
+                }
 
                 price = products.get(choice - 1).getPrice();
     
